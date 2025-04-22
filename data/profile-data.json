@@ -8,46 +8,12 @@
   "projects": [
     {
       "id": 1,
-      "title": "E-commerce Platform",
-      "description": "A full-featured online shopping platform with real-time inventory management, payment processing, and user authentication.",
-      "image": "/placeholder.svg?height=400&width=600",
-      "techStack": ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
+      "title": "PrepAhead",
+      "description": "Founded White Wolf Studio (whitewolfstudio.co.za) to develop PrepAhead, a comprehensive meal planning application designed to simplify weekly kitchen routines. PrepAhead streamlines meal organization, reduces food waste, and enhances the cooking experience through features like a flexible weekly planner, automatically generated smart shopping lists with sharing capabilities, and an integrated recipe collection with adjustable servings.",
+      "image": "https://prepahead.co.za/wp-content/uploads/2025/01/divi-hero.webp",
+      "techStack": ["Flutter", "Dart", "Firebase", "Firestore", "Cloud Functions", "GitHub Actions", "Figma", "Android Studio", "WordPress", "PHP"],
       "links": {
-        "github": "https://github.com/username/ecommerce-platform",
-        "live": "https://ecommerce-platform.example.com"
-      }
-    },
-    {
-      "id": 2,
-      "title": "Task Management App",
-      "description": "A collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.",
-      "image": "/placeholder.svg?height=400&width=600",
-      "techStack": ["React", "Redux", "Firebase", "Material UI", "Jest"],
-      "links": {
-        "github": "https://github.com/username/task-management",
-        "live": "https://task-app.example.com"
-      }
-    },
-    {
-      "id": 3,
-      "title": "AI Content Generator",
-      "description": "An AI-powered application that generates marketing content, blog posts, and social media updates based on user prompts.",
-      "image": "/placeholder.svg?height=400&width=600",
-      "techStack": ["Next.js", "OpenAI API", "Tailwind CSS", "Vercel"],
-      "links": {
-        "github": "https://github.com/username/ai-content-generator",
-        "live": "https://ai-content.example.com"
-      }
-    },
-    {
-      "id": 4,
-      "title": "Fitness Tracking Dashboard",
-      "description": "A comprehensive fitness tracking application with data visualization, workout planning, and progress tracking.",
-      "image": "/placeholder.svg?height=400&width=600",
-      "techStack": ["Vue.js", "D3.js", "Node.js", "PostgreSQL", "Auth0"],
-      "links": {
-        "github": "https://github.com/username/fitness-dashboard",
-        "live": "https://fitness-tracker.example.com"
+        "live": "https://prepahead.co.za"
       }
     }
   ],

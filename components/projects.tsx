@@ -25,7 +25,7 @@ export default function Projects() {
           abilities.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex justify-center">
           {projectsData.map((project, index) => (
             <motion.div
               key={project.id}
@@ -34,7 +34,8 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="glass-card overflow-hidden group"
+              className="glass-card overflow-hidden group cursor-pointer"
+              onClick={() => setSelectedProject(project)}
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
@@ -43,18 +44,12 @@ export default function Projects() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <button
-                    onClick={() => setSelectedProject(project)}
-                    className="text-primary-foreground flex items-center gap-2 bg-primary/30 px-3 py-1.5 rounded-md backdrop-blur-sm"
-                  >
-                    <Maximize2 className="h-4 w-4" />
-                    View Details
-                  </button>
+                {/* Add title overlay */}
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex items-center justify-center">
+                  <h3 className="text-5xl font-bold text-white glow-text-accent">{project.title}</h3>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 glow-text-secondary">{project.title}</h3>
                 <p className="text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.techStack.slice(0, 3).map((tech) => (
@@ -88,7 +83,7 @@ export default function Projects() {
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <ExternalLink className="h-5 w-5" />
-                    <span className="sr-only">Live Demo</span>
+                    <span className="sr-only">Try it out</span>
                   </a>
                 </div>
               </div>
@@ -127,14 +122,14 @@ export default function Projects() {
               </button>
             </div>
             <div className="p-6">
-              <h3 className="text-2xl font-bold mb-2 glow-text-accent">{selectedProject.title}</h3>
+              <h3 className="text-2xl font-bold mb-2 text-white glow-text-accent">{selectedProject.title}</h3>
               <p className="text-muted-foreground mb-6">{selectedProject.description}</p>
 
               <div className="mb-6">
                 <h4 className="text-lg font-medium mb-2">Technologies Used:</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.techStack.map((tech) => (
-                    <span key={tech} className="px-3 py-1 rounded-full bg-primary/20 border border-primary/40 text-primary-foreground">
+                    <span key={tech} className="px-2 py-1 text-xs rounded-full bg-secondary/20 border border-secondary/40">
                       {tech}
                     </span>
                   ))}
@@ -143,22 +138,13 @@ export default function Projects() {
 
               <div className="flex gap-4">
                 <a
-                  href={selectedProject.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-muted hover:bg-muted/80 rounded-md transition-colors text-muted-foreground"
-                >
-                  <Github className="h-5 w-5" />
-                  View Code
-                </a>
-                <a
                   href={selectedProject.links.live}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 rounded-md transition-colors text-primary-foreground"
                 >
                   <ExternalLink className="h-5 w-5" />
-                  Live Demo
+                  Try it out
                 </a>
               </div>
             </div>
