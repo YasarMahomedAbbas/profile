@@ -53,7 +53,7 @@
   ],
   "techStack": {
     "AI & Algorithms": [
-      { "name": "Reinforcement Learning", "icon": "Cpu", "projects": ["Kriegspiel Chess AI", "Intelligent Agents"] },
+     { "name": "Reinforcement Learning", "icon": "Cpu", "projects": ["Kriegspiel Chess AI", "Intelligent Agents"] },
       { "name": "Neural Networks", "icon": "Code", "projects": ["AI Research", "Intelligent Systems"] },
       { "name": "TensorFlow", "icon": "Code", "projects": ["ML Projects", "AI Applications"] },
       { "name": "Genetic Algorithms", "icon": "Database", "projects": ["Optimization Problems", "Evolutionary Systems"] }

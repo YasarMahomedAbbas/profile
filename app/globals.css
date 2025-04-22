@@ -26,7 +26,7 @@
     --radius: 0.5rem;
 
     --glow-primary: 210 100% 50%;
-    --glow-secondary: 280 100% 50%;
+    --glow-secondary: 60 100% 50%;
     --glow-accent: 160 100% 50%;
   }
 
@@ -52,7 +52,7 @@
     --ring: 240 4.9% 83.9%;
 
     --glow-primary: 210 100% 50%;
-    --glow-secondary: 280 100% 50%;
+    --glow-secondary: 330 100% 50%;
     --glow-accent: 160 100% 50%;
   }
 }

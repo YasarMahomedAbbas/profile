@@ -64,6 +64,11 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        'glow-primary': '0 0 8px 1px hsl(var(--glow-primary))',
+        'glow-secondary': '0 0 8px 1px hsl(var(--glow-secondary))',
+        'glow-accent': '0 0 8px 1px hsl(var(--glow-accent))',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

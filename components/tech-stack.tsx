@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { 
   Code, Database, Globe, Layout, Layers, Server, Smartphone, Terminal, 
   Palette, Cpu, Monitor 
@@ -46,57 +46,56 @@ export default function TechStack() {
         {Object.entries(techData).map(([category, technologies], categoryIndex) => (
           <div key={category} className="mb-16">
             <h3 className="text-2xl font-semibold mb-6 glow-text-secondary">{category}</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
               {technologies.map((tech, index) => (
-                <motion.div
-                  key={tech.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                  className="glass-card p-6 flex flex-col items-center text-center cursor-pointer"
-                  onClick={() => setSelectedTech(tech)}
+                <div 
+                  key={tech.name} 
+                  className="relative"
+                  onMouseEnter={() => setSelectedTech(tech)}
+                  onMouseLeave={() => setSelectedTech(null)}
                 >
-                  <div className="h-12 w-12 mb-4 text-primary animate-pulse-glow">
-                    {iconMap[tech.icon as IconKey] || <Code />}
-                  </div>
-                  <h4 className="font-medium">{tech.name}</h4>
-                </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05 }}
+                    className="glass-card p-1 flex flex-col items-center text-center cursor-pointer shadow-glow-accent max-w-[10rem] mx-auto"
+                  >
+                    <div className="h-8 w-8 mb-2 text-primary animate-pulse-glow">
+                      {iconMap[tech.icon as IconKey] || <Code />}
+                    </div>
+                    <h4 className="text-xs font-medium">{tech.name}</h4>
+                  </motion.div>
+                  
+                  <AnimatePresence>
+                    {selectedTech === tech && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-36 z-10"
+                      >
+                        <div className="glass-card p-4 rounded-md shadow-lg glow-border-accent">
+                          <h3 className="text-lg font-bold mb-2 glow-text-accent">{selectedTech.name}</h3>
+                          <div>
+                            <h4 className="text-sm font-medium mb-1">Used in projects:</h4>
+                            <ul className="list-disc pl-4 space-y-1 text-xs">
+                              {selectedTech.projects.map((project) => (
+                                <li key={project}>{project}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
             </div>
           </div>
         ))}
-
-        {selectedTech && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/70"
-            onClick={() => setSelectedTech(null)}
-          >
-            <motion.div
-              className="glass-card p-8 max-w-md w-full glow-border-accent"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <h3 className="text-2xl font-bold mb-4 glow-text-accent">{selectedTech.name}</h3>
-              <div className="mb-6">
-                <h4 className="text-lg font-medium mb-2">Used in projects:</h4>
-                <ul className="list-disc pl-5 space-y-1">
-                  {selectedTech.projects.map((project) => (
-                    <li key={project}>{project}</li>
-                  ))}
-                </ul>
-              </div>
-              <button
-                onClick={() => setSelectedTech(null)}
-                className="px-4 py-2 bg-primary/20 hover:bg-primary/30 rounded-md border border-primary/50 transition-colors"
-              >
-                Close
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
       </motion.div>
     </section>
   )
