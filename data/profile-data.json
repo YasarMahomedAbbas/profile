@@ -1,0 +1,222 @@
+{
+  "personalInfo": {
+    "name": "Yasar Abbas",
+    "title": "Software Developer",
+    "languages": ["English (Native)", "German (Basic)", "Dutch (Learning)"],
+    "hobbies": ["Gaming", "Hiking", "Home Automation"]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-commerce Platform",
+      "description": "A full-featured online shopping platform with real-time inventory management, payment processing, and user authentication.",
+      "image": "/placeholder.svg?height=400&width=600",
+      "techStack": ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
+      "links": {
+        "github": "https://github.com/username/ecommerce-platform",
+        "live": "https://ecommerce-platform.example.com"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "description": "A collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.",
+      "image": "/placeholder.svg?height=400&width=600",
+      "techStack": ["React", "Redux", "Firebase", "Material UI", "Jest"],
+      "links": {
+        "github": "https://github.com/username/task-management",
+        "live": "https://task-app.example.com"
+      }
+    },
+    {
+      "id": 3,
+      "title": "AI Content Generator",
+      "description": "An AI-powered application that generates marketing content, blog posts, and social media updates based on user prompts.",
+      "image": "/placeholder.svg?height=400&width=600",
+      "techStack": ["Next.js", "OpenAI API", "Tailwind CSS", "Vercel"],
+      "links": {
+        "github": "https://github.com/username/ai-content-generator",
+        "live": "https://ai-content.example.com"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Fitness Tracking Dashboard",
+      "description": "A comprehensive fitness tracking application with data visualization, workout planning, and progress tracking.",
+      "image": "/placeholder.svg?height=400&width=600",
+      "techStack": ["Vue.js", "D3.js", "Node.js", "PostgreSQL", "Auth0"],
+      "links": {
+        "github": "https://github.com/username/fitness-dashboard",
+        "live": "https://fitness-tracker.example.com"
+      }
+    }
+  ],
+  "techStack": {
+    "AI & Algorithms": [
+      { "name": "Reinforcement Learning", "icon": "Cpu", "projects": ["Kriegspiel Chess AI", "Intelligent Agents"] },
+      { "name": "Neural Networks", "icon": "Code", "projects": ["AI Research", "Intelligent Systems"] },
+      { "name": "TensorFlow", "icon": "Code", "projects": ["ML Projects", "AI Applications"] },
+      { "name": "Genetic Algorithms", "icon": "Database", "projects": ["Optimization Problems", "Evolutionary Systems"] }
+    ],
+    "Frontend": [
+      { "name": "React", "icon": "Layout", "projects": ["Web Applications", "User Interfaces"] },
+      { "name": "Next.js", "icon": "Globe", "projects": ["High-Performance Sites", "Web Applications"] },
+      { "name": "TypeScript", "icon": "Code", "projects": ["Type-Safe Applications", "Enterprise Systems"] },
+      { "name": "Flutter", "icon": "Smartphone", "projects": ["Mobile Apps", "Cross-Platform Development"] }
+    ],
+    "Backend": [
+      { "name": "ASP.NET Core", "icon": "Server", "projects": ["Marine Facilities Planning", "Web APIs"] },
+      { "name": "Node.js", "icon": "Terminal", "projects": ["REST APIs", "Backend Services"] },
+      { "name": "C#", "icon": "Code", "projects": ["Enterprise Applications", "Unity Development"] },
+      { "name": "MS SQL", "icon": "Database", "projects": ["Data Systems", "Enterprise Storage"] }
+    ],
+    "Mobile & Other": [
+      { "name": "Unity3D", "icon": "Layers", "projects": ["Mining Simulations", "Vehicle Simulations"] },
+      { "name": "Docker", "icon": "Cpu", "projects": ["Containerization", "Development Environments"] }
+    ]
+  },
+  "education": [
+    {
+      "id": 1,
+      "degree": "Master of Science, Computer Science",
+      "institution": "University",
+      "period": "2017 - 2019",
+      "description": "Thesis on 'The Design and Implementation of an Intelligent Agent to Play Kriegspiel Chess, an Imperfect Information Game'. Using deep counterfactual regret minimization algorithms to train AI agents.",
+      "achievements": [
+        "Developed advanced reinforcement learning models",
+        "Implemented imperfect information game AI",
+        "Utilized high-performance computing resources"
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "Bachelor of Science (Honours), Computer Science",
+      "institution": "University",
+      "period": "2016 - 2017",
+      "description": "Project: 'Kriegspiel Chess Game for Information Superiority Demonstration'. Built an engine allowing users to create chess variants with unique pieces, movements, and vision levels.",
+      "achievements": [
+        "Artificial Intelligence specialization",
+        "Cryptography coursework",
+        "BioInformatics studies"
+      ]
+    },
+    {
+      "id": 3,
+      "degree": "Bachelor's Degree, Computer Science",
+      "institution": "University",
+      "period": "2012 - 2016",
+      "description": "Foundational computer science education with focus on programming languages, algorithms, and natural language processing.",
+      "achievements": [
+        "Java programming proficiency",
+        "Python development skills",
+        "C++ application development",
+        "NLP research projects"
+      ]
+    }
+  ],
+  "career": [
+    {
+      "id": 1,
+      "title": "Full Stack Developer",
+      "company": "Maas Software Engineering",
+      "period": "2024 - Present",
+      "responsibilities": [
+        ".NET developer working on the Marine Facilities Planning",
+        "Implemented communications from research vessels for real-time reporting and tracking",
+        "Developed comprehensive carbon emission analysis tools for end-to-end journeys",
+        "Member of infosec team ensuring software security and compliance"
+      ],
+      "techStack": ["DotNet", "JavaScript", "Microsoft Azure", "MSSQL", "MVC", "Web API", "Security"]
+    },
+    {
+      "id": 2,
+      "title": "Lead Unity Developer",
+      "company": "ThoroughTec Simulations",
+      "period": "2022 - 2024",
+      "responsibilities": [
+        "Developed mining vehicle simulations using Unity3D",
+        "Managed team of 7 developers and 2 testers",
+        "Conducted standups, sprint planning, and team organization",
+        "Handled interdepartmental communication and management reporting",
+        "Gathered data and requirements via on-site visits"
+      ],
+      "techStack": ["Unity3D", "DotNet", "Leadership", "Project Management", "Sprint Planning", "Team Building"]
+    },
+    {
+      "id": 3,
+      "title": "Junior Lead Unity Developer",
+      "company": "ThoroughTec Simulations",
+      "period": "2021 - 2022",
+      "responsibilities": [
+        "Developed mining vehicle simulations using Unity3D",
+        "Worked with Software Manager to lead a team of 3 developers and 1 tester",
+        "Conducted standups, sprint planning, and retrospectives",
+        "Facilitated team building and communication exercises",
+        "Delivered progress reports to management"
+      ],
+      "techStack": ["Unity3D", "DotNet", "Leadership", "Sprint Planning"]
+    },
+    {
+      "id": 4,
+      "title": "Unity Developer",
+      "company": "ThoroughTec Simulations",
+      "period": "2019 - 2021",
+      "responsibilities": [
+        "Developed mining vehicle simulations using Unity3D",
+        "Created automated drive train testing environment with performance data reporting",
+        "Implemented plug-and-play simulation of vehicle avoidance and intervention systems (VIS/CAS)"
+      ],
+      "techStack": ["Unity3D", "Unity DevOps", "DotNet", "Angular"]
+    },
+    {
+      "id": 5,
+      "title": "Computer Science Tutor",
+      "company": "University Of KwaZulu-Natal",
+      "period": "2017 - 2019",
+      "responsibilities": [
+        "Tutored and guided undergraduate computer science students",
+        "Assisted with programming assignments and concepts",
+        "Helped develop curricula and learning materials"
+      ],
+      "techStack": ["Python", "Java"]
+    }
+  ],
+  "skills": [
+    {
+      "category": "AI Algorithms",
+      "items": ["Reinforcement Learning", "Regret Minimization", "Neural Networks", "Genetic Algorithms", "Natural Language Processing"]
+    },
+    {
+      "category": "AI Tools",
+      "items": ["Ollama", "Stable Diffusion", "Flux", "TensorFlow", "PyTorch"]
+    },
+    {
+      "category": "Programming Languages",
+      "items": ["C#", "JavaScript", "TypeScript", "Dart", "Python", "Java", "C++"]
+    },
+    {
+      "category": "Development Tools",
+      "items": ["Git", "Docker", "Jenkins", "Jira", "Confluence"]
+    },
+    {
+      "category": "Libraries & Frameworks",
+      "items": ["ASP.Net Core", ".Net Framework", "React", "Next.js", "Node.js", "Django"]
+    },
+    {
+      "category": "Testing Frameworks",
+      "items": ["NUnit", "MSTest", "Moq", "pytest", "flutter_test"]
+    },
+    {
+      "category": "Game Development Tools",
+      "items": ["Unity3D", "Plastic SCM"]
+    },
+    {
+      "category": "Mobile Development Tools",
+      "items": ["Flutter", "Android Studio"]
+    },
+    {
+      "category": "Design Tools",
+      "items": ["Figma"]
+    }
+  ]
+} 
