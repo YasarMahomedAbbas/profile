@@ -7,7 +7,13 @@ import { cn } from "@/lib/utils"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: [
+      { url: '/favicon.webp', type: 'image/webp' },
+      { url: '/favicon.jpg', type: 'image/jpeg' }
+    ]
+  }
 };
 
 export default function RootLayout({

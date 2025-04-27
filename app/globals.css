@@ -78,7 +78,7 @@
   }
 
   .glow-text-accent {
-    @apply text-accent;
+    @apply text-accent-foreground;
     text-shadow: 0 0 10px hsl(var(--glow-accent) / 70%), 0 0 20px hsl(var(--glow-accent) / 40%);
   }
 

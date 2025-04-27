@@ -8,7 +8,7 @@ export interface Project {
   image: string;
   techStack: string[];
   links: {
-    github: string;
+    github?: string;
     live: string;
   };
 }
@@ -25,7 +25,7 @@ export interface Education {
   institution: string;
   period: string;
   description: string;
-  achievements: string[];
+  keyActivities: string[];
 }
 
 export interface Career {
@@ -37,11 +37,19 @@ export interface Career {
   techStack: string[];
 }
 
+export interface HobbyItem {
+  name: string;
+  icon: string;
+  description: string;
+}
+
 export interface PersonalInfo {
   name: string;
   title: string;
   languages: string[];
   hobbies: string[];
+  hobbiesDetail?: HobbyItem[];
+  highlightedSkills: string[];
 }
 
 export interface ProfileData {
@@ -60,7 +68,7 @@ import profileData from '@/data/profile-data.json';
 
 // Cache the data access functions
 export const getProfileData = cache((): ProfileData => {
-  return profileData as ProfileData;
+  return profileData as unknown as ProfileData;
 });
 
 // Helper functions to get specific data

@@ -67,15 +67,17 @@ export default function Projects() {
                   )}
                 </div>
                 <div className="flex gap-3">
-                  <a
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <Github className="h-5 w-5" />
-                    <span className="sr-only">GitHub</span>
-                  </a>
+                  {project.links.github && (
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <Github className="h-5 w-5" />
+                      <span className="sr-only">GitHub</span>
+                    </a>
+                  )}
                   <a
                     href={project.links.live}
                     target="_blank"

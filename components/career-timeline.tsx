@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { motion } from "framer-motion"
-import { Calendar, X } from "lucide-react"
+import { Calendar, X, Info } from "lucide-react"
 import { getCareer, type Career } from "@/utils/data-service"
 import {
   Dialog,
@@ -108,6 +108,28 @@ export default function CareerTimeline() {
                             </div>
                           </>
                         )}
+                      </div>
+                      
+                      <div className={`mt-3 ${index % 2 === 0 ? "text-left" : "text-right"}`}>
+                        <div className={`flex flex-wrap gap-2 mb-3 ${index % 2 !== 0 ? "justify-end" : "justify-start"}`}>
+                          {job.techStack.slice(0, 3).map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2 py-0.5 text-xs rounded-full bg-primary/20 border border-primary/40"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                          {job.techStack.length > 3 && (
+                            <span className="px-2 py-0.5 text-xs rounded-full bg-primary/10 border border-primary/30">
+                              +{job.techStack.length - 3} more
+                            </span>
+                          )}
+                        </div>
+                        <button className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors">
+                          <Info className="h-3.5 w-3.5 mr-1" />
+                          View details
+                        </button>
                       </div>
                     </div>
                   </div>
