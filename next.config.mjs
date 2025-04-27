@@ -16,8 +16,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/Profile' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Profile/' : '',
   output: 'export',
   trailingSlash: true,
   experimental: {
