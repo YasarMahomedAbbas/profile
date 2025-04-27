@@ -11,10 +11,16 @@ export const metadata = {
   description: 'A timeline of my professional career, education, skills and interests',
   generator: 'v0.dev',
   icons: {
-    icon: [
-      { url: '/favicon.webp', type: 'image/webp' },
-      { url: '/favicon.jpg', type: 'image/jpeg' }
-    ]
+    icon: '/favicon.webp',
+    shortcut: '/favicon.webp',
+    apple: '/favicon.webp',
+    other: [
+      {
+        rel: 'icon',
+        type: 'image/jpeg',
+        url: '/favicon.jpg',
+      },
+    ],
   },
   openGraph: {
     title: 'Yasar Abbas',
