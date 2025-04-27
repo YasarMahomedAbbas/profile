@@ -11,14 +11,14 @@ export const metadata = {
   description: 'A timeline of my professional career, education, skills and interests',
   generator: 'v0.dev',
   icons: {
-    icon: '/favicon.webp',
-    shortcut: '/favicon.webp',
-    apple: '/favicon.webp',
+    icon: 'favicon.webp',
+    shortcut: 'favicon.webp',
+    apple: 'favicon.webp',
     other: [
       {
         rel: 'icon',
         type: 'image/jpeg',
-        url: '/favicon.jpg',
+        url: 'favicon.jpg',
       },
     ],
   },
@@ -27,7 +27,7 @@ export const metadata = {
     description: 'A timeline of my professional career, education, skills and interests',
     images: [
       {
-        url: '/favicon.webp',
+        url: 'favicon.webp',
         width: 800,
         height: 800,
         alt: 'Profile Image',
@@ -39,7 +39,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Yasar Abbas',
     description: 'A timeline of my professional career, education, skills and interests',
-    images: ['/favicon.webp'],
+    images: ['favicon.webp'],
     creator: '@username',
   },
 };

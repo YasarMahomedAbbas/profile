@@ -16,6 +16,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/Profile' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Profile' : '',
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
