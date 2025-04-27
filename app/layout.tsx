@@ -7,13 +7,35 @@ import { cn } from "@/lib/utils"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
+  title: 'Yasar Abbas',
+  description: 'A timeline of my professional career, education, skills and interests',
   generator: 'v0.dev',
   icons: {
     icon: [
       { url: '/favicon.webp', type: 'image/webp' },
       { url: '/favicon.jpg', type: 'image/jpeg' }
     ]
-  }
+  },
+  openGraph: {
+    title: 'Yasar Abbas',
+    description: 'A timeline of my professional career, education, skills and interests',
+    images: [
+      {
+        url: '/favicon.webp',
+        width: 800,
+        height: 800,
+        alt: 'Profile Image',
+      }
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yasar Abbas',
+    description: 'A timeline of my professional career, education, skills and interests',
+    images: ['/favicon.webp'],
+    creator: '@username',
+  },
 };
 
 export default function RootLayout({

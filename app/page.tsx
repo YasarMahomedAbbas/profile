@@ -8,8 +8,8 @@ import Hobbies from "@/components/hobbies"
 import AnimatedBackground from "@/components/animated-background"
 
 export const metadata: Metadata = {
-  title: "Interactive Career Timeline",
-  description: "A futuristic portfolio showcasing my professional journey, skills, and interests",
+  title: "Yasar Abbas",
+  description: "A timeline of my professional career, education, skills and interests",
 }
 
 export default function Home() {
