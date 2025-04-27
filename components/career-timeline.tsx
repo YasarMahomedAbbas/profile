@@ -61,18 +61,18 @@ export default function CareerTimeline() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className={`flex items-start ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
+                  className={`flex items-start ${index % 2 === 0 ? "justify-start md:justify-start" : "justify-start md:justify-end"}`}
                 >
-                  <div className={`w-1/2 ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
+                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"} px-4 md:px-0 pl-8 md:pl-auto`}>
                     <div
-                      className={`glass-card p-6 glow-border-primary ${index % 2 === 0 ? "text-left" : "text-right"} cursor-pointer hover:scale-[1.02] transition-transform duration-200`}
+                      className={`glass-card p-6 glow-border-primary text-left md:${index % 2 === 0 ? "text-left" : "text-right"} cursor-pointer hover:scale-[1.02] transition-transform duration-200`}
                       onClick={() => handleJobClick(job)}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => e.key === 'Enter' && handleJobClick(job)}
                     >
                       <div
-                        className={`flex items-center ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
+                        className={`flex flex-col md:flex-row items-start md:items-center ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"}`}
                       >
                         {index % 2 === 0 && (
                           <>
@@ -80,7 +80,7 @@ export default function CareerTimeline() {
                               <h3 className="text-xl font-bold glow-text-secondary">{job.title}</h3>
                               <h4 className="text-lg">{job.company}</h4>
                             </div>
-                            <div className="flex items-center ml-auto pl-4">
+                            <div className="flex items-center mt-2 md:mt-0 md:ml-auto md:pl-4">
                               <Calendar className="h-4 w-4 mr-2 text-muted-foreground" />
                               <span className="text-sm text-muted-foreground mr-2">{job.period}</span>
                               {index === 0 && (
@@ -93,7 +93,7 @@ export default function CareerTimeline() {
                         )}
                         {index % 2 !== 0 && (
                           <>
-                            <div className="flex items-center mr-auto pr-4">
+                            <div className="flex items-center md:mr-auto md:pr-4 mb-2 md:mb-0">
                               {index === 0 && (
                                 <span className="px-2 py-0.5 text-xs rounded-full bg-primary/20 border border-primary/40 text-primary font-medium mr-2">
                                   Current
@@ -102,7 +102,7 @@ export default function CareerTimeline() {
                               <Calendar className="h-4 w-4 mr-2 text-muted-foreground" />
                               <span className="text-sm text-muted-foreground">{job.period}</span>
                             </div>
-                            <div className="text-right">
+                            <div className="md:text-right">
                               <h3 className="text-xl font-bold glow-text-secondary">{job.title}</h3>
                               <h4 className="text-lg">{job.company}</h4>
                             </div>
@@ -110,8 +110,8 @@ export default function CareerTimeline() {
                         )}
                       </div>
                       
-                      <div className={`mt-3 ${index % 2 === 0 ? "text-left" : "text-right"}`}>
-                        <div className={`flex flex-wrap gap-2 mb-3 ${index % 2 !== 0 ? "justify-end" : "justify-start"}`}>
+                      <div className={`mt-3 text-left md:${index % 2 === 0 ? "text-left" : "text-right"}`}>
+                        <div className={`flex flex-wrap gap-2 mb-3 justify-start md:${index % 2 !== 0 ? "justify-end" : "justify-start"}`}>
                           {job.techStack.slice(0, 3).map((tech) => (
                             <span
                               key={tech}

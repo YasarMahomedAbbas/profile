@@ -65,17 +65,17 @@ export default function Education() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className={`flex items-start ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
+                  className={`flex items-start ${index % 2 === 0 ? "justify-start md:justify-start" : "justify-start md:justify-end"}`}
                 >
-                  <div className={`w-1/2 ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
+                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"} px-4 md:px-0 pl-8 md:pl-auto`}>
                     <div
-                      className={`glass-card p-6 glow-border-primary ${index % 2 === 0 ? "text-left" : "text-right"} cursor-pointer hover:scale-[1.02] transition-transform duration-200`}
+                      className={`glass-card p-6 glow-border-primary text-left md:${index % 2 === 0 ? "text-left" : "text-right"} cursor-pointer hover:scale-[1.02] transition-transform duration-200`}
                       onClick={() => handleEducationClick(education)}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => e.key === 'Enter' && handleEducationClick(education)}
                     >
-                      <div className={`flex items-center ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
+                      <div className={`flex flex-col md:flex-row items-start md:items-center ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"}`}>
                         {index % 2 === 0 && (
                           <>
                             <div className="flex-grow">
@@ -85,7 +85,7 @@ export default function Education() {
                                 <span className="text-muted-foreground">{education.institution}</span>
                               </div>
                             </div>
-                            <div className="flex items-center ml-auto pl-4 flex-shrink-0">
+                            <div className="flex items-center mt-2 md:mt-0 md:ml-auto md:pl-4 flex-shrink-0">
                               <Calendar className="h-4 w-4 mr-2 text-muted-foreground" />
                               <span className="text-sm text-muted-foreground">{education.period}</span>
                             </div>
@@ -93,13 +93,13 @@ export default function Education() {
                         )}
                         {index % 2 !== 0 && (
                           <>
-                             <div className="flex items-center mr-auto pr-4 flex-shrink-0">
+                             <div className="flex items-center md:mr-auto md:pr-4 mb-2 md:mb-0 flex-shrink-0">
                               <Calendar className="h-4 w-4 mr-2 text-muted-foreground" />
                               <span className="text-sm text-muted-foreground">{education.period}</span>
                             </div>
-                            <div className="flex-grow text-right">
+                            <div className="flex-grow md:text-right">
                               <h3 className="text-xl font-bold glow-text-secondary">{education.degree}</h3>
-                               <div className="flex items-center justify-end gap-1">
+                               <div className="flex items-center md:justify-end gap-1">
                                 <BookOpen className="h-4 w-4 text-muted-foreground" />
                                 <span className="text-muted-foreground">{education.institution}</span>
                               </div>
@@ -108,7 +108,7 @@ export default function Education() {
                         )}
                       </div>
                       
-                      <div className={`mt-3 ${index % 2 === 0 ? "text-left" : "text-right"}`}>
+                      <div className={`mt-3 text-left md:${index % 2 === 0 ? "text-left" : "text-right"}`}>
                         <button className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors">
                           <Info className="h-3.5 w-3.5 mr-1" />
                           View details
